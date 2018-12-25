@@ -88,11 +88,11 @@ controller.hears(['hello', 'hi','こんにちは'], 'direct_message,direct_menti
   bot.reply(message, 'こんにちは');
 });
 
-controller.hears(['whats in the news', 'news please', 'ニュースのトレンドを教えて'], 'direct_message,direct_mention,mention',
+controller.hears(['whats in the news', 'news please', '最新ニュースのトレンドを教えて'], 'direct_message,direct_mention,mention',
   function(bot, message) {
     bot.startConversation(message, function(err, convo) {
       if (!err) {
-        convo.say('こんにちは');
+        // convo.say('こんにちは');
         convo.ask('どんなニュースに興味がありますか？', function(response, convo) {
           convo.ask('調べて欲しいニュースは `' + response.text + '`ですね?', [
             {
@@ -136,12 +136,17 @@ controller.hears(['whats in the news', 'news please', 'ニュースのトレン�
               if (apiResponse.ok) {
                 apiResponse.json()
                   .then(json => {
-                    bot.reply(message, 'Here are some news articles...');
+                    bot.reply(message, 'いくつかのトレンド記事を紹介します');
                     for (let i = 0; i < 3; i++) {
                       setTimeout(() => {
                         bot.reply(message, `<${json.results[i].url}>`);
                       }, i * 1000);
                     }
+                  }).then(() => {
+                    setTimeout(() => {
+                      bot.reply(message, '');
+                      bot.reply(message, `センチメント分析やより詳細は http://localhost:3000/search/${decodeURI(qs.replace('query=',''))} をご覧ください`);
+                    }, 4000);
                   });
               } else {
                 throw new Error(apiResponse.json());

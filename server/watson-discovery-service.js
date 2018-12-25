@@ -35,7 +35,7 @@ if (process.env.service_watson_discovery !== undefined) {
 }
 
 discovery.environmentId = 'system';
-discovery.collectionId = 'news';
+discovery.collectionId = 'news-ja';
 
 discovery.listEnvironments = Promise.promisify(discovery.listEnvironments);
 discovery.query = Promise.promisify(discovery.query);

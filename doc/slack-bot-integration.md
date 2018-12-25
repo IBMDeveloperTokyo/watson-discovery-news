@@ -23,8 +23,8 @@ const bot = controller.spawn({
 Listening for messages is as easy as specifying what keywords you want to listen to. You also need to specify whether those keywords are directed directly to the bot user or in the slack channel. Below we are listening for a direct message or mention of the bot user in a slack channel and respond with a text reply of `Hello`.
 
 ```js
-controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', function(bot, message) {
-  bot.reply(message, 'Hello');
+controller.hears(['hello', 'hi', 'こんにちは'], 'direct_message,direct_mention,mention', function(bot, message) {
+  bot.reply(message, 'こんにちは');
 });
 ```
 
@@ -35,7 +35,6 @@ In the developer journey, we are trying to make a bot that feels realistic by ha
 ```js
 bot.startConversation(message, function(err, convo) {
   // convo.say('Hi there!');
-  convo.say('こんにちは');
   // convo.ask('What news are you interested in?', function(response, convo) {
   convo.ask('どんなニュースに興味がありますか？', function(response, convo) {
     // Response passed here
