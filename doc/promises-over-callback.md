@@ -13,9 +13,12 @@ const DiscoveryV1 = require('watson-developer-cloud/discovery/v1');
 
 // Initialize the Discovery service with credentials from Bluemix
 const discovery = new DiscoveryV1({
-  username: '<username>',
-  password: '<password>',
-  version_date: DiscoveryV1.VERSION_DATE_2017_04_27
+    version: '<version-date>',
+    url: '<service_url>',
+    iam_apikey: '<iam_api_key>'
+//  username: '<username>',
+//  password: '<password>',
+//  version_date: DiscoveryV1.VERSION_DATE_2017_04_27
 });
 
 // Get all of the environments
@@ -63,9 +66,12 @@ const DiscoveryV1 = require('watson-developer-cloud/discovery/v1');
 
 // Initialize the Discovery service
 const discovery = new DiscoveryV1({
-  username: '<username>',
-  password: '<password>',
-  version_date: DiscoveryV1.VERSION_DATE_2017_04_27
+    version: '<version-date>',
+    url: '<service_url>',
+    iam_apikey: '<iam_api_key>'
+//  username: '<username>',
+//  password: '<password>',
+//  version_date: DiscoveryV1.VERSION_DATE_2017_04_27
 });
 
 // Promisify the API using Bluebird's promisify factory function

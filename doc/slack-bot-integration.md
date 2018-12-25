@@ -34,8 +34,10 @@ In the developer journey, we are trying to make a bot that feels realistic by ha
 
 ```js
 bot.startConversation(message, function(err, convo) {
-  convo.say('Hi there!');
-  convo.ask('What news are you interested in?', function(response, convo) {
+  // convo.say('Hi there!');
+  convo.say('こんにちは');
+  // convo.ask('What news are you interested in?', function(response, convo) {
+  convo.ask('どんなニュースに興味がありますか？', function(response, convo) {
     // Response passed here
   });
 });

@@ -22,9 +22,10 @@ const version_date = '2018-03-05';
 if (process.env.service_watson_discovery !== undefined) {
   var service_watson_discovery = JSON.parse(process.env.service_watson_discovery);
   discovery = new DiscoveryV1({
+    iam_apikey: '<iam_api_key>',
     url: service_watson_discovery['url'],
-    username: service_watson_discovery['username'],
-    password: service_watson_discovery['password'],
+  //  username: service_watson_discovery['username'],
+  //  password: service_watson_discovery['password'],
     version_date: version_date
   });
 } else {
