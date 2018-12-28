@@ -136,7 +136,7 @@ controller.hears(['whats in the news', 'news please', '最新ニュースのト�
               if (apiResponse.ok) {
                 apiResponse.json()
                   .then(json => {
-                    bot.reply(message, 'いくつかのトレンド記事を紹介します');
+                    bot.reply(message, `${new Date().toLocaleString()}` + ' 現在のトレンド記事を紹介します。');
                     for (let i = 0; i < 3; i++) {
                       setTimeout(() => {
                         bot.reply(message, `<${json.results[i].url}>`);
