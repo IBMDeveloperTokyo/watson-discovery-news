@@ -88,7 +88,7 @@ controller.hears(['hello', 'hi','こんにちは'], 'direct_message,direct_menti
   bot.reply(message, 'こんにちは');
 });
 
-controller.hears(['whats in the news', 'news please', '最新ニュースのトレンドを教えて'], 'direct_message,direct_mention,mention',
+controller.hears(['whats in the news', 'news please', 'トレンド教えて'], 'direct_message,direct_mention,mention',
   function(bot, message) {
     bot.startConversation(message, function(err, convo) {
       if (!err) {
@@ -159,7 +159,7 @@ controller.hears(['whats in the news', 'news please', '最新ニュースのト�
             });
           } else {
             // this happens if the conversation ended prematurely for some reason
-            bot.reply(message, 'OK, nevermind!');
+            bot.reply(message, '失礼しました');
           }
         });
       }
