@@ -88,7 +88,7 @@ controller.hears(['hello', 'hi','こんにちは'], 'direct_message,direct_menti
   bot.reply(message, 'こんにちは');
 });
 
-controller.hears(['whats in the news', 'news please', 'トレンド教えて'], 'direct_message,direct_mention,mention',
+controller.hears(['whats in the news', 'news please', 'トレンド教えて', '最新ニュースのトレンドを教えて', '最新のニュースを教えて'], 'direct_message,direct_mention,mention',
   function(bot, message) {
     bot.startConversation(message, function(err, convo) {
       if (!err) {
