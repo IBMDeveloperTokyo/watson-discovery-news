@@ -73,7 +73,7 @@ const bot = controller.spawn({
   token: slackBotToken
 }).startRTM();
 
-controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', function(bot, message) {
+controller.hears(['hello', 'hi','こんにちは'], 'direct_message,direct_mention,mention', function(bot, message) {
 
   bot.api.reactions.add({
     timestamp: message.ts,
@@ -85,16 +85,16 @@ controller.hears(['hello', 'hi'], 'direct_message,direct_mention,mention', funct
     }
   });
 
-  bot.reply(message, 'Hello.');
+  bot.reply(message, 'こんにちは');
 });
 
-controller.hears(['whats in the news', 'news please'], 'direct_message,direct_mention,mention',
+controller.hears(['whats in the news', 'news please', 'トレンド教えて', '最新ニュースのトレンドを教えて', '最新のニュースを教えて'], 'direct_message,direct_mention,mention',
   function(bot, message) {
     bot.startConversation(message, function(err, convo) {
       if (!err) {
-        convo.say('Hi there!');
-        convo.ask('What news are you interested in?', function(response, convo) {
-          convo.ask('You want me to search for news articles about `' + response.text + '`?', [
+        // convo.say('こんにちは');
+        convo.ask('どんなニュースに興味がありますか？', function(response, convo) {
+          convo.ask('調べて欲しいニュースは `' + response.text + '`ですね?', [
             {
               pattern: bot.utterances.yes,
               callback: function(response, convo) {
@@ -125,7 +125,7 @@ controller.hears(['whats in the news', 'news please'], 'direct_message,direct_me
 
         convo.on('end', function(convo) {
           if (convo.status == 'completed') {
-            bot.reply(message, 'OK searching...');
+            bot.reply(message, 'かしこまりました。検索中です...');
 
             const qs = queryString.stringify({ query: convo.extractResponse('search-query') });
             const host = `http://localhost:${port}`;
@@ -136,12 +136,17 @@ controller.hears(['whats in the news', 'news please'], 'direct_message,direct_me
               if (apiResponse.ok) {
                 apiResponse.json()
                   .then(json => {
-                    bot.reply(message, 'Here are some news articles...');
+                    bot.reply(message, `${new Date().toLocaleString()}` + ' 現在のトレンド記事を紹介します。');
                     for (let i = 0; i < 3; i++) {
                       setTimeout(() => {
                         bot.reply(message, `<${json.results[i].url}>`);
                       }, i * 1000);
                     }
+                  }).then(() => {
+                    setTimeout(() => {
+                      bot.reply(message, '');
+                      bot.reply(message, `センチメント分析やより詳細は http://localhost:3000/search/${decodeURI(qs.replace('query=',''))} をご覧ください`);
+                    }, 4000);
                   });
               } else {
                 throw new Error(apiResponse.json());
@@ -154,7 +159,7 @@ controller.hears(['whats in the news', 'news please'], 'direct_message,direct_me
             });
           } else {
             // this happens if the conversation ended prematurely for some reason
-            bot.reply(message, 'OK, nevermind!');
+            bot.reply(message, '失礼しました');
           }
         });
       }

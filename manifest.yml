@@ -5,11 +5,11 @@ declared-services:
     plan: lite
 applications:
 - path: .
-  name: watsondiscoverynews
+  name: trend_news
   buildpack: sdk-for-nodejs
-  memory: 512M
+  memory: 256M
   instances: 1
-  disk_quota: 512M
+  disk_quota: 256M
   random-route: true
   timeout: 180
   services:

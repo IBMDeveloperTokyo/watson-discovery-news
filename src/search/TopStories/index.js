@@ -35,10 +35,10 @@ const Story = props => (
     </a>
     <div className="story--source-and-score">
       <span className="base--p story--source">
-        {props.host ? props.host : 'Placeholder Source'}
+        {props.url ? props.url : 'Placeholder Source'}
       </span>
-      <div className="story--score base--p">Confidence Score: <Bar rangeStart={0} rangeEnd={5}  score={props.score} /></div>
-      <div className="story--sentiment base--p">Sentiment: {props.sentiment}</div>
+      {/* <div className="story--score base--p">Confidence Score: <Bar rangeStart={0} rangeEnd={5}  score={props.score} /></div> */}
+      {/* <div className="story--sentiment base--p">Sentiment: {props.sentiment}</div> */}
     </div>
   </div>
 );

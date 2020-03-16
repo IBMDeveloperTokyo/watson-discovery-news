@@ -26,7 +26,7 @@ const { parseData, topicStory } = utils;
 const WatsonNewsServer = new Promise((resolve, reject) => {
   // listEnvironments as sanity check to ensure creds are valid
   discovery.listEnvironments({})
-    .then(response => {
+    .then(() => {
       // environment and collection ids are always the same for Watson News
       const environmentId = discovery.environmentId;
       const collectionId = discovery.collectionId;

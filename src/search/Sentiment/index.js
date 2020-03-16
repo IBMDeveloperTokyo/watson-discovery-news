@@ -49,11 +49,10 @@ class Sentiment extends React.Component {
       <div ref={el => { this.el = el; }}>
         <div className="top-stories widget">
           <div className="widget--header">
-            <h2 className="base--h2 widget--header-title">Sentiment Expressed</h2>
+            <h2 className="base--h2 widget--header-title">センチメント分析</h2>
             <div className="widget--header-spacer" />
           </div>
-          <div>Below is the total count of the number of news articles that have negative, neutral or positive sentiment
-              expressed in the article related to your search query above.</div>
+          <div>上記の検索クエリに関する記事で示されているネガティブ、中立、またはポジティブの感情を持つニュース記事の総数です</div>
           <div className="top-stories--list">
             <BarChart width={this.state.width} height={250} data={[this.props.data]}>
               <XAxis dataKey="Article Count" />

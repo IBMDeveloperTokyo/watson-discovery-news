@@ -30,7 +30,7 @@ class DefaultLayout extends React.Component {
           <li>Merger and Acquisition in Artificial Intelligence industry</li>
           <li>Tech IPOs</li>
           <li>Acquisition in Insurance Industry</li>
-          <li>Healthcare startups</li>
+          <li>ヘルスケアスタートアップ</li>
         </ul>
       </div>
     );

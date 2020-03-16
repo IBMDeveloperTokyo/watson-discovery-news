@@ -16,12 +16,8 @@
 
 const moment = require('moment');
 const aggregations = {
-  search: [
-    'term(enriched_text.sentiment.document.label)'
-  ],
-  trending: [
-    'term(enriched_title.entities.text,count:20).top_hits(1)'
-  ]
+  search: 'term(enriched_text.sentiment.document.label)',
+  trending: 'term(enriched_title.entities.text,count:20).top_hits(1)'
 };
 
 module.exports = {
