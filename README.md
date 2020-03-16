@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/IBM/watson-discovery-news.svg?branch=master)](https://travis-ci.org/IBM/watson-discovery-news)
+* 日本オリジナルパターンは [こちら](./README-ja.md)
 
 # Query Watson Discovery News using the Watson Discovery Service
 
