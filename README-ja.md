@@ -47,7 +47,7 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
 [Node.jsサイト](https://nodejs.org/en/)へアクセスする。
 
 1. 「10.16.0 LTS」をクリックしてダウンロードする。
-2. ダウンロードしたインストールファイルを開き画面に従ってインストールする。
+2. ダウンロードしたインストールファイルを開き画面に従ってインストールする。
 
 <p align="center">
   <img width="600" src="doc/source/images/nodejs.png">
@@ -71,26 +71,26 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
   <img width="600" src="doc/source/images/vscode.png">
 </p>
 
-3. インストールファイルがダウンロードフォルダに格納されたらクリックして開いて、画面に従ってインストールを進める。
+3. インストールファイルがダウンロードフォルダに格納されたらクリックして開いて、画面に従ってインストールを進める。
 4. インストールが完了したらVisual Studio Codeを起動する。
-5. 「View(表示)」メニューから「Command Palette (コマンドパレット)」を選択する
+5. 「View(表示)」メニューから「Command Palette (コマンドパレット)」を選択する
 
 <p align="center">
   <img width="600" src="doc/source/images/vscode02.png">
 </p>
 
-6. ">"に続いて「path」と入力し、「Shell Command: Install 'code' command in PATH (シェルコマンド:PATH内に’code’コマンドをインストールします)」を選択する。
+6. ">"に続いて「path」と入力し、「Shell Command: Install 'code' command in PATH (シェルコマンド:PATH内に’code’コマンドをインストールします)」を選択する。
 
 <p align="center">
   <img width="600" src="doc/source/images/vscode03.png">
 </p>
 
-7. 画面右下に「シェルコマンド’code’がPATHに正常にインストールされました。」通知が表示されればOK。
+7. 画面右下に「シェルコマンド’code’がPATHに正常にインストールされました。」通知が表示されればOK。
 
 ## ソースコードのダウンロード
 
 1. [GitHubのリポジトリ](https://github.com/taijihagino/watson-discovery-news)へアクセスする。
-2. 「Clone or download」ボタンをクリックしてアイコンをクリックしURLをコピーする。
+2. 「Clone or download」ボタンをクリックしてアイコンをクリックしURLをコピーする。
 
 <p align="center">
   <img width="600" src="doc/source/images/github.png">
@@ -111,7 +111,7 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
 ## Watson Discoveryサービスの新規作成
 
 1. [IBM Cloudサイト](https://ibm.biz/BdzKBB)へアクセスする
-2. 「メールアドレス」と「パスワード」を入力し、「ログイン」ボタンをクリックする。
+2. 「メールアドレス」と「パスワード」を入力し、「ログイン」ボタンをクリックする。
 3. IBM Cloudダッシュボード画面上の「カタログ」をクリックし、検索ボックスで「discovery」を
 入力して「Discovery」を選択する。
 
@@ -119,13 +119,13 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
   <img width="600" src="doc/source/images/ibmcloud.png">
 </p>
 
-4. 任意のサービス名を入力する。デプロイする地域/ロケーションの選択は「東京」を選択する
+4. 任意のサービス名を入力する。デプロイする地域/ロケーションの選択は「東京」を選択する
 
 <p align="center">
   <img width="600" src="doc/source/images/ibmcloud02.png">
 </p>
 
-5. 画面を下にスクロールし無料で作成する場合は「価格プラン」が「ライト」になっていることを確認し、画面下の「作成」ボタンをクリックする。
+5. 画面を下にスクロールし無料で作成する場合は「価格プラン」が「ライト」になっていることを確認し、画面下の「作成」ボタンをクリックする。
 
 <p align="center">
   <img width="600" src="doc/source/images/ibmcloud03.png">
@@ -134,14 +134,14 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
 6. IBM Watson Discoveryのサービスが作成され
 状況が「プロビジョンが進行中」と表示されれる。
 しばらくすると「プロビジョン済み」に変わる。<br>
-※しばらく経過しても状況が変わらない場合にはブラウザを再読み込みして最新情報を取得する。
+※しばらく経過しても状況が変わらない場合にはブラウザを再読み込みして最新情報を取得する。
 7. 作成したWatson Discoveryの名前をクリックする。
 
 <p align="center">
   <img width="600" src="doc/source/images/ibmcloud04.png">
 </p>
 
-8. 「資格情報」からURLの横のアイコンをクリックしてコピーする。
+8. 「資格情報」からURLの横のアイコンをクリックしてコピーする。
 
 <p align="center">
   <img width="600" src="doc/source/images/ibmcloud05.png">
@@ -161,7 +161,7 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
   <img width="600" src="doc/source/images/vscode05.png">
 </p>
 
-3. 画面左下の表示が「master」から「Japanese」に変わったことを確認する。
+3. 画面左下の表示が「master」から「Japanese」に変わったことを確認する。
 
 <p align="center">
   <img width="600" src="doc/source/images/vscode06.png">
@@ -176,14 +176,14 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
 
 5. .envファイルの5行目の<add_discovery_url>を削除して先ほどWatson Discovery資格情報で**コピーしたURL**をペーストする。
 
-6. IBM Cloudの画面へ戻り、Watson Discoveryの「資格情報」からAPI鍵の横のアイコンをクリックしてコピーする。
+6. IBM Cloudの画面へ戻り、Watson Discoveryの「資格情報」からAPI鍵の横のアイコンをクリックしてコピーする。
 ※文字列を確認する場合は「資格情報を表示👁」をクリックする。
 
 <p align="center">
   <img width="600" src="doc/source/images/ibmcloud06.png">
 </p>
 
-7. .envファイルの9行目の<add_discovery_iam_apikey>を削除して先ほどコピーしたAPI鍵をペーストする。
+7. .envファイルの9行目の<add_discovery_iam_apikey>を削除して先ほどコピーしたAPI鍵をペーストする。
 8. 9行目の先頭の # を削除する。
 9. 12行目の「PORT=3000」と書かれているコードの先頭の # を削除する。
 
@@ -191,13 +191,13 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
 
 1. 自分で作成したSlackのWorkspaceへアクセスする。
 2. Slack画面のワークスペースのタイトルをクリックする。
-3. 表示されたメニューから「Manage apps」をクリックする。
+3. 表示されたメニューから「Manage apps」をクリックする。
 
 <p align="center">
   <img width="600" src="doc/source/images/slack.png">
 </p>
 
-4. 左側メニューから「Custom Integrations」をクリックし、「Bots」をクリックする。
+4. 左側メニューから「Custom Integrations」をクリックし、「Bots」をクリックする。
 
 <p align="center">
   <img width="600" src="doc/source/images/slack02.png">
@@ -229,7 +229,7 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
   <img width="600" src="doc/source/images/slack06.png">
 </p>
 
-8. Visual Studio Codeに戻り、.envファイルの15行目の<slack_bot_toke>を削除して先ほどコピーした **Slack bot API Token**をペーストする。
+8. Visual Studio Codeに戻り、.envファイルの15行目の<slack_bot_toke>を削除して先ほどコピーした **Slack bot API Token**をペーストする。
 9. 18行目の先頭の # を削除する。
 10. 「File(ファイル)」メニューから「Save(保存)」
 を選択して、.envファイルの編集した内容を保存する。
@@ -243,7 +243,7 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
 $ yarn start
 ```
 
-2. Webブラウザで「http://localhost:3000/」にアクセスする。
+2. Webブラウザで「http://localhost:3000/」にアクセスする。
 3. 「IBM Watson Discovery Service」画面が表示
 されることを確認する。
 
@@ -265,14 +265,14 @@ $ yarn start
 
 ## SlackチャンネルへBotの招待
 
-1. Slackのメッセージ入力欄で「@<作成したbot名> こんにちは」と入力し「送信」ボタン
+1. Slackのメッセージ入力欄で「@<作成したbot名> こんにちは」と入力し「送信」ボタン
 をクリックする。
 
 <p align="center">
   <img width="600" src="doc/source/images/slack08.png">
 </p>
 
-2. Slackbotが「You mentioned @<入力したbot名>、but they’renot in this channel.(メンションしていますが、このチャンネルには参加していません。)」と自動応答したら「Invite Them(招待する)」ボタンをクリックする。
+2. Slackbotが「You mentioned @<入力したbot名>、but they’renot in this channel.(メンションしていますが、このチャンネルには参加していません。)」と自動応答したら「Invite Them(招待する)」ボタンをクリックする。
 
 <p align="center">
   <img width="600" src="doc/source/images/slack09.png">
@@ -288,34 +288,32 @@ $ yarn start
   <img width="600" src="doc/source/images/slack10.png">
 </p>
 
-2. **「どんなニュースに興味がありますか？」** と自動応答が返ってきたら、 **<font color="blue">任意のキーワード</font>** を入力して「送信」ボタンをクリックする。
+2. **「どんなニュースに興味がありますか？」** と自動応答が返ってきたら、 **<font color="blue">任意のキーワード</font>** を入力して「送信」ボタンをクリックする。
 
 <p align="center">
   <img width="600" src="doc/source/images/slack11.png">
 </p>
 
-3. **「調べて欲しいニュースは<font color="blue">任意のキーワード</font>ですね？」** を自動応答が返ってきたら **「<font color="blue">yes</font>」** を入力し、「送信」ボタンをクリックする。
+3. **「調べて欲しいニュースは<font color="blue">任意のキーワード</font>ですね？」** を自動応答が返ってきたら **「<font color="blue">yes</font>」** を入力し、「送信」ボタンをクリックする。
 
 <p align="center">
   <img width="600" src="doc/source/images/slack12.png">
 </p>
 
-4. Slack botが **<font color="blue">任意のキーワード</font>** に関するトレンド記事を3つ表示することを確認する。
+4. Slack botが **<font color="blue">任意のキーワード</font>** に関するトレンド記事を3つ表示することを確認する。
 
 <p align="center">
   <img width="600" src="doc/source/images/slack12.png">
 </p>
 
-5. Slack botの返信した内容の一番最後の行 **「センチメント分析やより詳細は<URL>をご覧ください」** のURLをクリックする。
-6. 表示されたサイトで「Sentiments」をクリックするとキーワードに関するニュース記事の
+5. Slack botの返信した内容の一番最後の行 **「センチメント分析やより詳細は<URL>をご覧ください」** のURLをクリックする。
+6. 表示されたサイトで「Sentiments」をクリックするとキーワードに関するニュース記事の
 センチメント分析結果が表示される。
 
 <p align="center">
   <img width="600" src="doc/source/images/app02.png">
 </p>
 
-
-```
 
 # Links
 * [Visual Studio Code ダウンロードサイト](https://code.visualstudio.com/Download)
