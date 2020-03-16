@@ -21,7 +21,7 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
 4. GitHubソースコードのクローン
 5. IBM Watson Discoveryサービスの作成
 6. .envファイル編集
-7. Slack [Japan Developer Experience]ワークスペース への参加
+7. Slackワークスペースへbotの追加
 8. Slack API Tokenの取得
 9. Botアプリの起動
 10. Slackチャンネル作成
@@ -31,7 +31,7 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
 # 開発に必要なもの
 
 * [IBM Cloudアカウント](https://ibm.biz/BdzKBB): IBMが提供するクラウドサービス及びクラウドプラットフォーム
-* [Watson Discovery](https://www.ibm.com/watson/developercloud/discovery.html): アプリケーションが識別するためのコグニティブ検索およびコンテンツ分析エンジン
+* [Watson Discovery](https://www.ibm.com/jp-ja/cloud/watson-discovery): アプリケーションが識別するためのコグニティブ検索およびコンテンツ分析エンジン
 * [Node.js](https://nodejs.org/en/) - 拡張可能なアプリケーションを構築するために設計された非同期イベント駆動型JavaScriptランタイム
 * [Yarn](https://yarnpkg.com) - node.js用の高速で信頼性が高く安全な依存関係マネージャー
 * [Slack](https://slack.com) - チャットボット統合を備えたクラウドベースのチームコラボレーションツールおよびサービスのセット。自分のワークスペースを作成しておいて下さい。
@@ -41,7 +41,7 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
 
 [![](http://img.youtube.com/vi/EZGgvci9nC0/0.jpg)](https://youtu.be/EZGgvci9nC0)
 
-# 開発のステップ
+# 開発
 
 ## Node.jsのインストール
 [Node.jsサイト](https://nodejs.org/en/)へアクセスする。
@@ -187,7 +187,7 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
 8. 9行目の先頭の # を削除する。
 9. 12行目の「PORT=3000」と書かれているコードの先頭の # を削除する。
 
-## Slack ワークスペースへの参加
+## Slackワークスペースへbotの追加
 
 1. 自分で作成したSlackのWorkspaceへアクセスする。
 2. Slack画面のワークスペースのタイトルをクリックする。
@@ -223,15 +223,17 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
   <img width="600" src="doc/source/images/slack05.png">
 </p>
 
-7. Botサービスが作成され発行された「API Token」の内容をコピーする。
+## Slack API Tokenの取得
+
+1. Botサービスが作成され発行された「API Token」の内容をコピーする。
 
 <p align="center">
   <img width="600" src="doc/source/images/slack06.png">
 </p>
 
-8. Visual Studio Codeに戻り、.envファイルの15行目の<slack_bot_toke>を削除して先ほどコピーした **Slack bot API Token**をペーストする。
-9. 18行目の先頭の # を削除する。
-10. 「File(ファイル)」メニューから「Save(保存)」
+2. Visual Studio Codeに戻り、.envファイルの15行目の<slack_bot_toke>を削除して先ほどコピーした **Slack bot API Token**をペーストする。
+3. 18行目の先頭の # を削除する。
+4. 「File(ファイル)」メニューから「Save(保存)」
 を選択して、.envファイルの編集した内容を保存する。
 
 ## Slack botアプリの起動
