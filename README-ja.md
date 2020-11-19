@@ -53,7 +53,7 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
   <img width="600" src="doc/source/images/nodejs.png">
 </p>
 
-## yarnのインストール
+## yarnのインストール (Mac)
 
 1. ターミナルを開く。
 2. 下記のコマンドを実行しYarnをインストールする。
@@ -61,6 +61,9 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
     ```
     $ brew install yarn
     ```
+    
+## yarnのインストール (Windows)
+[こちら](https://classic.yarnpkg.com/ja/docs/install/#windows-stable)からインストーラー、またはコマンドでインストールする。
 
 ## Visual Studio Codeのインストール
 
