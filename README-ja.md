@@ -46,7 +46,7 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
 ## Node.jsのインストール
 [Node.jsサイト](https://nodejs.org/en/)へアクセスする。
 
-1. 「10.16.0 LTS」をクリックしてダウンロードする。
+1. LTS(Long Time Support)版をクリックしてダウンロードする。
 2. ダウンロードしたインストールファイルを開き画面に従ってインストールする。
 
 <p align="center">
