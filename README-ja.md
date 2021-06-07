@@ -248,7 +248,7 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
 $ yarn start
 ```
 
-2. Webブラウザで「http://localhost:3000/」にアクセスする。
+2. Webブラウザで「 http://localhost:3000/ 」にアクセスする。
 3. 「IBM Watson Discovery Service」画面が表示
 されることを確認する。
 
