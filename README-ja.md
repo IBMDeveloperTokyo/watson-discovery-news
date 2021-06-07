@@ -188,7 +188,6 @@ Watson Discovery Newsは、Watson Discovery Serviceに関連付けられてい�
 
 7. .envファイルの9行目の<add_discovery_iam_apikey>を削除して先ほどコピーしたAPI鍵をペーストする。
 8. 9行目の先頭の # を削除する。
-9. 12行目の「PORT=3000」と書かれているコードの先頭の # を削除する。
 
 ## Slackワークスペースへbotの追加
 
